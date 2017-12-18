@@ -1,0 +1,86 @@
+<script>
+link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+</script>
+<div id="products" class="row list-group">
+    <div *ngFor="let x of olist" >
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                                  
+             <img  class="group list-group-image" src="{{x.url}}" alt="image" />
+                          <div class="row">
+                              <div class="col-xs-12 col-md-6">
+                              Current Price $<p class="lead">
+                              {{x.name}}    
+                              {{x.price}} </p>
+                              </div>
+                          </div>    
+                          <div class="col-xs-12 col-md-6">
+                              <a  class="btn btn-success"  href="" >
+                                  Add to cart</a>
+                                  
+                              </div>
+                              <div>
+                                  <input type = "submit" value = "Add to Cart" ng-click = "addProduct()">
+                              </div>
+           </div>   
+        
+        </div>
+   </div>
+   </div>
+   <!--                    module   -->
+       <div ng-app="myApp" ng-controller="myCtrl">
+            <ul>
+                <li ng-repeat = "product in products">
+                    <span>{{product.name}}</span>
+                    <span>{{product.price}}</span>
+                    <span><input type = "number" min = "0" placeholder = "0" value = "0" ng-model = "amount"></span>
+                    <h2> This is cart</h2>
+                    <span>{{product.price*amount}}</span>
+                </li>
+            </ul>
+        </div>
+        
+  <!-- <div class="container">
+      <div class="well well-sm">
+          <strong>Display</strong>
+          <div class="btn-group">
+              <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+              </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                  class="glyphicon glyphicon-th"></span>Grid</a>
+          </div>
+      </div>
+      <div id="products" class="row list-group">
+          <div *ngFor="let x of olist" >
+
+          <div class="item  col-xs-4 col-lg-4">
+              <div class="thumbnail">
+                  <img  class="group list-group-image" src="{{x.url}}" alt="image" />
+                   <div class="caption">
+                      <h4 class="group inner list-group-item-heading">
+                          Product title</h4>
+                      <p class="group inner list-group-item-text">
+                          Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                      <div class="row">
+                          <div class="col-xs-12 col-md-6">
+                              <p class="lead">
+                                  $21.000</p>
+                          </div>
+                          <div class="col-xs-12 col-md-6">
+                              <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+          </div>
+        
+          
+      </div>
+  </div>-->
+  
+
+ 
+ 

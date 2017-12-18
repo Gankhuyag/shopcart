@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shopcart</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+
+ 
+var helloApp = angular.module("myApp", []);
+
+helloApp.controller("myCtrl", function($scope) {
+
+$scope.products = [
+                    { 'name':'Infosys Technologies',
+                    	'price': 125000,
+                    	'headoffice': 'Bangalore'},
+                    	{ 'name':'Cognizant Technologies',
+	                    	'employees': 100000,
+	                    	'headoffice': 'Bangalore'},
+	                    	{ 'name':'Wipro',
+		                    	'employees': 115000,
+		                    	'headoffice': 'Bangalore'},
+		                    	{ 'name':'Tata Consultancy Services (TCS)',
+			                    	'employees': 150000,
+			                    	'headoffice': 'Bangalore'},
+			                    	{ 'name':'HCL Technologies',
+				                    	'employees': 90000,
+				                    	'headoffice': 'Noida'},
+                    ];
+$scope.addProduct = function(){		
+	$scope.companies.push({ 'name':$scope.name, 'price': $scope.price });
+	$scope.name='';
+	$scope.price='';
+	//$scope.headoffice='';
+};
+});
+ 
+
+    </script>
+
+</body>
+</html>
